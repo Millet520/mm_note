@@ -11,10 +11,10 @@
     welcome: {{ request.session.username }}
 </p>
 <p>
-    <a href="">login out</a>
+    <a href="/user/login_out">login out</a>
 </p>
 <p>
-    <a href="">enter my note</a>
+    <a href="/note/list">enter my note</a>
 </p>
 {% else %}
     {% if request.COOKIES.username %}
@@ -22,10 +22,10 @@
             welcome: {{ request.COOKIES.username }}
         </p>
         <p>
-            <a href="">login out</a>
+            <a href="/user/login_out">login out</a>
         </p>
         <p>
-            <a href="">enter my note</a>
+            <a href="/note/list">enter my note</a>
         </p>
     {% else %}
         <p>

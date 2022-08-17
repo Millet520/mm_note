@@ -75,3 +75,17 @@ def login_view(request):
             resp.set_cookie('username', username, 3600*24*3)
             resp.set_cookie('uid', user.id, 3600*24*3)
         return resp
+
+
+def login_out_view(request):
+
+    if 'username' in request.session:
+        del request.session['username']
+    if 'uid' in request.session:
+        del request.session['uid']
+    resp = HttpResponseRedirect('/index')
+    if 'username' in request.COOKIES:
+        resp.delete_cookie('username')
+    if 'uid' in request.COOKIES:
+        resp.delete_cookie('uid')
+    return resp
