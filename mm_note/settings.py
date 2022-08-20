@@ -137,3 +137,11 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = '292937528@qq.com'
+EMAIL_HOST_PASSWORD = 'ngrctwpovnzecabe'
+EMAIL_USE_TLS = False
+# mail.send_mail(subject='hello world', message='nice', from_email='292937528@qq.com', recipient_list=['292937528@qq.com'])
